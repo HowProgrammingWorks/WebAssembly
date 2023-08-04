@@ -15,4 +15,8 @@ sudo dnf install rust-std-static-wasm32-unknown-unknown
 cargo install wasm-pack
 ```
 - See/edit `Cargo.toml`
+- Compole example:
+```
+wasm-pack build --target web
+```
 - Run CJS and ESM examples
