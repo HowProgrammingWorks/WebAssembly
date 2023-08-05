@@ -3,3 +3,4 @@
 - Rust
 - C++
 - WAT (WebAssembly Text format)
+- AssemblyScript
