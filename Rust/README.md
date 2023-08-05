@@ -20,3 +20,7 @@ cargo install wasm-pack
 wasm-pack build --target web
 ```
 - Run CJS and ESM examples
+```
+node 1-cjs.js
+node 2-esm.mjs
+```
