@@ -1,6 +1,6 @@
 # Node.js WebAssembly and WASI
 
-- Rust
-- C++
-- WAT (WebAssembly Text format)
-- AssemblyScript
+- [Rust](./Rust)
+- [C++](./C++)
+- [WAT (WebAssembly Text format)](./WAT)
+- [AssemblyScript](./AssemblyScript)

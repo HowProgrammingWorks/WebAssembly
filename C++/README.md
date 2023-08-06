@@ -2,7 +2,7 @@
 
 - Install Emscripten
 ```
-git clone https://github.com/emscripten-core/emsdk.git
+https://github.com/emscripten-core/emsdk.git
 ```
 - Compile to wasm
 ```

@@ -1,12 +1,12 @@
 # Rust for Node.js WebAssembly
 
 - Install rust
-For fedora:
+  - For fedora:
 ```
 sudo dnf install rust cargo
 ```
 - Install wasm32-unknown-unknown
-For fedora:
+  - For fedora:
 ```
 sudo dnf install rust-std-static-wasm32-unknown-unknown
 ```
