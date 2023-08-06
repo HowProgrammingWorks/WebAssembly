@@ -1,4 +1,9 @@
 node_modules
 *.log
 .DS_Store
-NodeJS/pkg
+*.wasm
+Rust/pkg
+Rust/target/
+WAT/wat2wasm
+C++/example.html
+C++/example.js
