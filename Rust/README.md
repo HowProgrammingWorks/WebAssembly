@@ -17,7 +17,7 @@ cargo install wasm-pack
 - See/edit `Cargo.toml`
 - Compole example:
 ```
-wasm-pack build --target web
+wasm-pack build --target nodejs
 ```
 - Run CJS and ESM examples
 ```

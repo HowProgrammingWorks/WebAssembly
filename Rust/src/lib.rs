@@ -1,8 +1,11 @@
+#![allow(non_snake_case)]
+
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen]
-extern {
-  pub fn callback(res: i32);
+#[wasm_bindgen(module = "imports")]
+extern "C" {
+  fn addCallback(res: i32);
+  fn subCallback(res: i32);
 }
 
 #[wasm_bindgen]
@@ -11,6 +14,11 @@ pub fn add(a: i32, b: i32) -> i32 {
 }
 
 #[wasm_bindgen]
-pub fn add_callback(a: i32, b: i32) {
-  callback(a + b)
+pub fn addAsync(a: i32, b: i32) {
+  addCallback(a + b)
+}
+
+#[wasm_bindgen]
+pub fn subAsync(a: i32, b: i32) {
+  subCallback(a - b)
 }
