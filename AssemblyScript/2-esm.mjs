@@ -3,10 +3,10 @@ import fsp from 'node:fs/promises';
 const context = {
   example: {
     addCallback: (res) => {
-      console.log({ res, expected: 12 });
+      console.log({ add: [10, 2], res, expected: 12 });
     },
     subCallback: (res) => {
-      console.log({ res, expected: 15 });
+      console.log({ sub: [20, 5], res, expected: 15 });
     },
   },
 };
@@ -14,8 +14,8 @@ const context = {
 const wasm = await fsp.readFile('./example.wasm');
 const example = await WebAssembly.instantiate(wasm, context);
 
-const sum = example.instance.exports.add(3, 7);
-console.log({ sum, expected: 10 });
+const res = example.instance.exports.sum(3, 7);
+console.log({ sum: [3, 7], res, expected: 10 });
 
-example.instance.exports.addAsync(10, 2);
-example.instance.exports.subAsync(20, 5);
+example.instance.exports.add(10, 2);
+example.instance.exports.sub(20, 5);
