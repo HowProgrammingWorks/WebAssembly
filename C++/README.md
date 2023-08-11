@@ -6,7 +6,7 @@ https://github.com/emscripten-core/emsdk.git
 ```
 - Compile to wasm
 ```
-emcc example.c -o example.html
+em++ -std=c++11 example.cpp  -Os -s WASM=1 -s SIDE_MODULE=1 -o example.wasm
 ```
 - Run CJS and ESM examples
 ```
