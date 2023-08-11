@@ -6,7 +6,7 @@ https://github.com/webassembly/wabt
 ```
 - Compile to wasm
 ```
-./wat2wasm example.wat
+wat2wasm example.wat
 ```
 - Run CJS and ESM examples
 ```

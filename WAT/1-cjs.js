@@ -5,8 +5,11 @@ const fsp = require('node:fs').promises;
 (async () => {
   const context = {
     imports: {
-      callback: (res) => {
-        console.log({ res });
+      addCallback: (res) => {
+        console.log({ res, expected: 12 });
+      },
+      subCallback: (res) => {
+        console.log({ res, expected: 15 });
       },
     },
   };
@@ -15,7 +18,8 @@ const fsp = require('node:fs').promises;
   const example = await WebAssembly.instantiate(wasm, context);
 
   const sum = example.instance.exports.add(3, 7);
-  console.log({ sum });
+  console.log({ sum, expected: 10 });
 
-  example.instance.exports.addCallback(3, 7);
+  example.instance.exports.addAsync(10, 2);
+  example.instance.exports.subAsync(20, 5);
 })();
